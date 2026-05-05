@@ -7,6 +7,8 @@
 /**
  * \note This source file is derivative work of psa_crypto.c from the Mbed TLS project
  */
+#include "tf_psa_crypto_platform_requirements.h"
+
 #include <assert.h>
 #include <string.h>
 #include <stdbool.h>

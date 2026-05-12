@@ -101,13 +101,13 @@ endif()
 
 if (TFM_PARTITION_CRYPTO)
     if (TFM_INSTALL_MBEDTLS_HEADERS)
+        # [nrf noup] crypto_driver_contexts_{primitives,composites,key_derivation}.h
+        # are removed from TF-M's interface tree; the Nordic versions in
+        # nrf/subsys/nrf_security/include/psa/ are used instead.
         install(FILES       ${INTERFACE_INC_DIR}/psa/README.rst
                             ${INTERFACE_INC_DIR}/psa/crypto.h
                             ${INTERFACE_INC_DIR}/psa/crypto_compat.h
                             ${INTERFACE_INC_DIR}/psa/crypto_driver_common.h
-                            ${INTERFACE_INC_DIR}/psa/crypto_driver_contexts_composites.h
-                            ${INTERFACE_INC_DIR}/psa/crypto_driver_contexts_key_derivation.h
-                            ${INTERFACE_INC_DIR}/psa/crypto_driver_contexts_primitives.h
                             ${INTERFACE_INC_DIR}/psa/crypto_driver_random.h
                             ${INTERFACE_INC_DIR}/psa/crypto_extra.h
                             ${INTERFACE_INC_DIR}/psa/crypto_platform.h
